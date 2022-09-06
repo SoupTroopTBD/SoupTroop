@@ -1,5 +1,5 @@
 import React from 'react';
-import 'landingPage.css';
+import './landingPage.css';
 
 class LandingPage extends React.Component {
   constructor(props) {
