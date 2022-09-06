@@ -17,6 +17,7 @@ class TheTest extends React.Component {
     if (soupVal) this.setState({ stage: soupVal });
   }
   render() {
+    const { screenWidth } = this.props;
     const saveProgress = (stage) => {
         localStorage.setItem('soupLvl', JSON.stringify(stage));
         this.setState({ stage });
@@ -25,16 +26,16 @@ class TheTest extends React.Component {
       <div>
         {
             this.state.stage === 'Empty Bowl' ?
-            <EmptyBowl saveProgress={saveProgress} />
+            <EmptyBowl saveProgress={saveProgress} screenWidth={screenWidth} />
             :
             this.state.stage === 'Lil Soup' ?
-            <LilSoup saveProgress={saveProgress} />
+            <LilSoup saveProgress={saveProgress} screenWidth={screenWidth} />
             :
             this.state.stage === 'Some Soup' ?
-            <SomeSoup saveProgress={saveProgress} />
+            <SomeSoup saveProgress={saveProgress} screenWidth={screenWidth} />
             :
             this.state.stage === 'Full Soup' ?
-            <FullSoup saveProgress={saveProgress} />
+            <FullSoup saveProgress={saveProgress} screenWidth={screenWidth} />
             : null
         }
       </div>

@@ -9,8 +9,16 @@ class LandingPage extends React.Component {
       testMode: false
     };
   }
+  componentDidMount() {
+    const { screenWidth } = this.props;
+    if (screenWidth < 1024) {
+      setTimeout(() => {
+        document.querySelector('.categoryWrapper').click();
+      }, 750);
+    }
+  }
   render() {
-    const { setTestMode } = this.props;
+    const { setTestMode, screenWidth } = this.props;
     const toggleTestMode = () => {
       this.setState({ testMode: !this.state.testMode });
       setTestMode(true);
@@ -18,7 +26,7 @@ class LandingPage extends React.Component {
     return (
       <> {
         this.state.testMode ?
-        <TheTest />
+        <TheTest screenWidth={screenWidth} />
         :
         <div style={{ position: 'relative' }}>
           <div style={{ marginTop: '13vh' }}>
@@ -30,7 +38,7 @@ class LandingPage extends React.Component {
                     target='_blank'
                     rel='noopener noreferrer'
                     href='https://twitter.com/intent/tweet?hashtags=SoupTroop&original_referer=https%3A%2F%2Fpublish.twitter.com%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Emention%7Ctwgr%5ESoupTroopTBD&screen_name=SoupTroopTBD&text=Expect%20Us'
-                    style={{ color: 'white', position: 'absolute', left: '45%', top: '20%', zIndex: '20', textDecoration: 'none' }}
+                    style={{ color: 'white', position: 'absolute', left: screenWidth < 1023 ? '40%' : '45%', top: '20%', zIndex: '20', textDecoration: 'none' }}
                   >#clickMe</a>
                 </div>
                 <button onClick={toggleTestMode}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconButton, Menu, MenuItem, ListItemIcon, Divider } from '@mui/material';
+import { IconButton, Menu, MenuItem, ListItemIcon, Divider, TextField } from '@mui/material';
 import { Search, Code, Image, Help } from '@mui/icons-material';
 
 class EmptyBowl extends React.Component {
@@ -11,7 +11,7 @@ class EmptyBowl extends React.Component {
     };
   }
   render() {
-    const { saveProgress } = this.props;
+    const { saveProgress, screenWidth } = this.props;
     const nextStage = () => saveProgress('Lil Soup');
     const openResourcesDialog = (event) => {
         this.setState({ help: true, helpAnchor: event.currentTarget });
@@ -23,12 +23,18 @@ class EmptyBowl extends React.Component {
         window.open(URL, '_blank');
         this.setState({ help: false, helpAnchor: null });
     }
+    const checkVal = (e) => {
+        const { value } = e.target;
+        if (value === 'THEJUNGLE') nextStage();
+    }
     return (
       <div style={{ color: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h2 style={{ fontSize: '32pt' }}>Welcome to my test</h2>
-        <p style={{ color: 'rgba(255,255,255,0.5)' }}>If you aren't very confident in cipher and riddle solving, feel free to use the resources in the top right...</p>
-        <p style={{ color: 'rgba(255,255,255,0.5)' }}>If you are confident in you skills however, go on and get started, for the test has already begun</p>
+        <h2 style={{ fontSize: screenWidth < 1023 ? '25pt' : '32pt', padding: '10px' }}>Welcome to my test</h2>
+        <p style={{ color: 'rgba(255,255,255,0.5)', textAlign: 'center', padding: '10px' }}>If you aren't very confident in cipher and riddle solving, feel free to use the resources in the top right...</p>
+        <p style={{ color: '#323232', textAlign: 'center', padding: '10px' }}>- .... . .--- ..- -. --. .-.. .</p>
+        <p style={{ color: 'rgba(255,255,255,0.5)', textAlign: 'center', padding: '10px' }}>If you are confident in you skills however, go on and get started, for the test has already begun</p>
         <img className={'fadeIn'} src={require('../../img/emptyBowl.png')} alt='Empty Bowl' />
+        <TextField onInput={checkVal} error style={{ marginTop: '50px' }} id='outlined-basic' label='Password' variant='outlined' />
         <IconButton onClick={openResourcesDialog} style={{ position: 'absolute', top: '10vh', right: 0 }} color='primary' component='label'>
           <Help />
         </IconButton>
