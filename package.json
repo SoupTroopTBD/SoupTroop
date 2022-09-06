@@ -1,7 +1,7 @@
 {
   "name": "souptroopapp",
   "version": "0.1.0",
-  "homepage": "http://souptrooptbd.io",
+  "homepage": "https://SoupTroopTBD.github.io/SoupTroop",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.4",
