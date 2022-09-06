@@ -16,3 +16,13 @@
     width: 192px;
     opacity: 1;
 }
+
+.fadeIn {
+    position: absolute;
+    left: 64px;
+    bottom: 10vh;
+    height: 192px;
+    width: 192px;
+    opacity: 1;
+    transition: width 1s 1s, height 1s 1s, opacity 1s;
+}
