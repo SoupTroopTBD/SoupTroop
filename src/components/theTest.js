@@ -1,5 +1,8 @@
 import React from 'react';
 import EmptyBowl from './theTest/emptyBowl';
+import LilSoup from './theTest/lilSoup';
+import SomeSoup from './theTest/someSoup';
+import FullSoup from './theTest/fullSoup';
 
 class TheTest extends React.Component {
   constructor(props) {
@@ -23,6 +26,15 @@ class TheTest extends React.Component {
         {
             this.state.stage === 'Empty Bowl' ?
             <EmptyBowl saveProgress={saveProgress} />
+            :
+            this.state.stage === 'Lil Soup' ?
+            <LilSoup saveProgress={saveProgress} />
+            :
+            this.state.stage === 'Some Soup' ?
+            <SomeSoup saveProgress={saveProgress} />
+            :
+            this.state.stage === 'Full Soup' ?
+            <FullSoup saveProgress={saveProgress} />
             : null
         }
       </div>
