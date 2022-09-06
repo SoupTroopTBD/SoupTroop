@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <p style={{ color: '#323232', fontSize: '14pt', marginRight: '15px' }}>Soup Troop 2022</p>
-      <a style={{ marginTop: '10px' }} href='https://twitter.com/SoupTroopTBD'>
+      <a style={{ marginTop: '10px' }} target='_blank' rel='noopener noreferrer' href='https://twitter.com/SoupTroopTBD'>
         <IconButton color='primary' component="label">
           <Twitter />
         </IconButton>
