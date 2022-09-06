@@ -5,7 +5,9 @@ import { Search, Code, Image, Help, Twitter } from '@mui/icons-material';
 class LilSoup extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      swap: false
+    };
   }
   render() {
     const { saveProgress } = this.props;
@@ -26,7 +28,7 @@ class LilSoup extends React.Component {
     }
     return (
       <div style={{ color: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <img onClick={() => {openResource('https://souptrooptbd.github.io/SoupTroop/whatthedogdo')}} className={'fadeIn'} src={require('../../img/lilSoup.png')} alt='Lil Soup' />
+        <img onClick={() => {this.setState({ swap: true })}} className={this.state.swap ? 'cipher' : 'fadeIn'} src={require(`../../img/${ this.state.swap ? 'cipher.PNG' : 'lilSoup.png' }`)} alt='Lil Soup' />
         <p style={{ color: '#323232',marginTop: '100px' }}>Click around...</p>
         <TextField onInput={checkVal} error style={{ marginTop: '150px' }} id='outlined-basic' label='Password' variant='outlined' />
         <IconButton onClick={openResourcesDialog} style={{ position: 'absolute', top: '10vh', right: 0 }} color='primary' component='label'>

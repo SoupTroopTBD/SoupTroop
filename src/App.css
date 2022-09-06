@@ -27,6 +27,14 @@
     transition: width 1s 1s, height 1s 1s, opacity 1s;
 }
 
+.cipher {
+    position: absolute;
+    left: 64px;
+    bottom: 10vh;
+    height: 192px;
+    width: 300px;
+}
+
 @media only screen and (max-width: 1024px) {
     .App .active, .App .fadeIn, .App .fadeOut {
         width: 112px !important;

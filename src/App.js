@@ -3,7 +3,6 @@ import './App.css';
 import Navigation from './components/navigation';
 import LandingPage from './components/landingPage';
 import Footer from './components/footer';
-import Cipher from './components/theTest/cipher';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -40,7 +39,6 @@ function App() {
               </div>
             </div>
          )}/>
-         <Route path='/SoupTroop/whatthedogdo' exact element={(<Cipher />)}/>
         </Routes>
       </Router>
     </div>
