@@ -29,13 +29,13 @@ function App() {
          <Route path='/SoupTroop' exact element={(
             <div style={{ display: 'flex', flexFlow: 'column', height: '100vh' }}>
               <img className={testMode ? 'fadeOut' : 'active'} src={require('./img/hotSoup.png')} alt='Hot Soup' />
-              <div style={{ height: width < 1023 ? '6vh' : '10vh', background: '#121212' }}>
+              <div style={{ height: '10vh', background: '#121212' }}>
                 <Navigation />
               </div>
               <div style={{ flex: '1 1 auto', background: '#323232' }}>
                 <LandingPage screenWidth={width} setTestMode={setTestMode} />
               </div>
-              <div style={{ height: width < 1023 ? '6vh' : '10vh', background: '#121212' }}>
+              <div style={{ height: '10vh', background: '#121212' }}>
                 <Footer />
               </div>
             </div>
