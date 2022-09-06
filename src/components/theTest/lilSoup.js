@@ -26,7 +26,7 @@ class LilSoup extends React.Component {
     }
     return (
       <div style={{ color: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <img onClick={() => {openResource('http://localhost:3000/SoupTroop/whatthedogdo')}} className={'fadeIn'} src={require('../../img/lilSoup.png')} alt='Lil Soup' />
+        <img onClick={() => {openResource('https://souptrooptbd.github.io/SoupTroop/whatthedogdo')}} className={'fadeIn'} src={require('../../img/lilSoup.png')} alt='Lil Soup' />
         <p style={{ color: '#323232',marginTop: '100px' }}>Click around...</p>
         <TextField onInput={checkVal} error style={{ marginTop: '150px' }} id='outlined-basic' label='Password' variant='outlined' />
         <IconButton onClick={openResourcesDialog} style={{ position: 'absolute', top: '10vh', right: 0 }} color='primary' component='label'>
