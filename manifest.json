@@ -1,0 +1,15 @@
+{
+  "short_name": "Soup Troop",
+  "name": "Soup Troop TBD",
+  "icons": [
+    {
+      "src": "soup.png",
+      "type": "image/png",
+      "sizes": "387x381"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
