@@ -1,13 +1,13 @@
 import Navigation from './components/navigation';
 import LandingPage from './components/landingPage';
 import Footer from './components/footer';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Switch>
+        <Routes>
          <Route path='/SoupTroop' exact component={(
             <div style={{ display: 'flex', flexFlow: 'column', height: '100vh' }}>
               <div style={{ height: '10vh', background: '#121212' }}>
@@ -21,7 +21,7 @@ function App() {
               </div>
             </div>
          )}/>
-        </Switch>
+        </Routes>
       </Router>
     </div>
   );
