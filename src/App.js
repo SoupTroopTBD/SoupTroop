@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Navigation from './components/navigation';
+import LandingPage from './components/landingPage';
+import Footer from './components/footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: 'flex', flexFlow: 'column', height: '100vh' }}>
+      <div style={{ height: '10vh', background: '#121212' }}>
+        <Navigation />
+      </div>
+      <div style={{ flex: '1 1 auto', background: '#323232' }}>
+        <LandingPage />
+      </div>
+      <div style={{ height: '10vh', background: '#121212' }}>
+        <Footer />
+      </div>
     </div>
   );
 }
