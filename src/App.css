@@ -31,6 +31,7 @@
     .App .active, .App .fadeIn, .App .fadeOut {
         width: 112px !important;
         height: 112px !important;
+        bottom: 10vh - 112px;
         left: calc(10%);
     }
 }
