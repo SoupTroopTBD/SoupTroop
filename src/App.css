@@ -1,0 +1,18 @@
+.fadeOut {
+    position: absolute;
+    left: 64px;
+    bottom: 10vh;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: width 1s 1s, height 1s 1s, opacity 1s;
+}
+
+.active {
+    position: absolute;
+    left: 64px;
+    bottom: 10vh;
+    height: 192px;
+    width: 192px;
+    opacity: 1;
+}
